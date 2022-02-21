@@ -4,18 +4,23 @@ import tabula
 
 
 # Read a PDF File
-dfs = tabula.read_pdf("Untitled.pdf", pages='1-2', lattice=True)
+dfs = tabula.read_pdf("Untitled.pdf", pages='1-2', lattice=True, pandas_options={'header': None})
+# Get DataFrame with data to process
+dfs[3].drop(labels=[0,1,2], axis=0, inplace=True)
+df_data = dfs[3]
 
-print(len(dfs))
-print(dfs[5])
+
+# Get df with name of file
+df_name = dfs[5]
+
+
+print(df_data, end='\n', sep='\n')
+# print(df_data, end='\n', sep='\n')
+print(df_data.columns)
+# print(len(dfs))
+# print(dfs[3], dfs[5], end='\n', sep='\n')
 # dfs[1].to_csv('out.csv', sep=',', encoding='utf-8', index=False)
-# for df in dfs:
-    # print(df, end='\n', sep='\n')
-    # df.to_csv(f'{df}.csv', sep=',', encoding='utf-8')
-# df = tabula.read_pdf("Untitled.pdf", pages='all')[0]
-# convert PDF into CSV
-# tabula.convert_into("Untitled.pdf", "Untitled.csv", output_format="csv", pages='1-3')
-# print(df)
+
 
 # df = tabula.read_pdf("Untitled.pdf", pages='all')[0:1]
 # df.to_csv('out.csv', sep=',', encoding='utf-8')
