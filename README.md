@@ -17,9 +17,9 @@ This package requires:
 
 ## Usage
 
-Two options are available for running the program. Note, that file pdf files with the dara should located in the same directory.
+Two options are available for running the program. Note, that pdf files with the XRD data should located in the same directory.
 1. Open `sherrer_calc.ipynb` file and run cell by cell. 
-2. Run command `sherrer_calc.py` or `sherrer_calc.py <file_name>`.
+2. Or run command `sherrer_calc.py` or `sherrer_calc.py <file_name>`.
 The existed pdf files will be automatically read and processed by the program.
  
 
